@@ -74,3 +74,17 @@ cc_test(
     ],
     deps = [":cdylib"],
 )
+
+rust_library(
+    name = "rlib",
+    srcs = ["lib.rs"],
+    edition = "2021",
+)
+
+cc_test(
+    name = "main_with_rlib",
+    srcs = [
+        "main.cc",
+    ],
+    deps = [":rlib"],
+)
