@@ -11,6 +11,8 @@ cc_library(
     name = "allocator_library",
     srcs = ["allocator_library.cc"],
     visibility = ["//visibility:public"],
+    linkstatic = 1,
+    alwayslink = 1,
 )
 
 cc_library(
